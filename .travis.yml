@@ -1,0 +1,21 @@
+language: python
+python:
+  - '2.7'
+  - '3.4'
+  - '3.3'
+  - '3.5'
+  - '3.6'
+  - nightly
+git:
+  depth: 150
+script:
+  - python test.py
+before_deploy: "echo 'Starting deploy to PyPI...'"
+deploy:
+  provider: pypi
+  user: mfuentesg
+  password: $PYPI_PASSWORD
+  on:
+    tags: true
+    branch: master
+after_deploy: "echo 'Deployment finished to PyPI...'"
