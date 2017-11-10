@@ -7,6 +7,10 @@ class LuhnTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             luhnpy.digit('00x')
 
+    def test_digit_hexadecimal_string(self):
+        with self.assertRaises(ValueError):
+            luhnpy.digit('0xff000000')
+
     def test_complete_invalid_argument(self):
         with self.assertRaises(ValueError):
             luhnpy.digit('')
