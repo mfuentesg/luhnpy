@@ -7,6 +7,7 @@ setup(
     version='1.0.0',
     description='A minimalistic implementation of Luhn algorithm',
     long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     author='Marcelo Fuentes',
     author_email='marceloe.fuentes@gmail.com',
     url='https://github.com/mfuentesg/luhnpy',
